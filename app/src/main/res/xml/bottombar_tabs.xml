@@ -1,0 +1,23 @@
+<tabs>
+    <tab
+        id="@+id/tab_back"
+        icon="@drawable/ic_back"
+        />
+    <tab
+        id="@+id/tab_forward"
+        icon="@drawable/ic_forward"
+         />
+    <tab
+        id="@+id/tab_menu"
+        icon="@drawable/ic_tab"
+         />
+    <tab
+        id="@+id/tab_bookmark"
+        icon="@drawable/ic_bookmark"
+        />
+    <tab
+        id="@+id/tabs"
+        icon="@drawable/ic_tabs"
+         />
+
+</tabs>

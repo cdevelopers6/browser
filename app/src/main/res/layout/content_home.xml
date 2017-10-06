@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.browser.codedady.Home"
+    tools:showIn="@layout/activity_home">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:minHeight="66dp"
+
+
+
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+
+        android:id="@+id/appBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/round"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="56dp"
+
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/Actionbar" >
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/app_search_hint"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:text="@string/app_name"
+                android:textColor="#000"
+                android:textColorHint="#eeeeee"
+                android:theme="?attr/customTextViewStyle"
+                android:background="@drawable/layout_bg" />
+
+            <TextView
+                android:id="@+id/listBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:fontFamily="sans-serif-condensed"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/urlBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:fontFamily="sans-serif-condensed"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/roundsqure"
+        android:id="@+id/bookmark">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/newsfeedpad"
+        android:layout_below="@+id/bookmark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp">
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/customViewContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/background_light"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/bottomBar"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:layout_marginLeft="40dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_back"
+            android:onClick="onClick"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/front"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:layout_marginLeft="40dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_forward"
+            android:onClick="onClick"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:layout_marginLeft="40dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_tab"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/bookmark1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:layout_marginLeft="40dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_bookmark"
+            android:onClick="onClick"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="0.05"
+            android:background="@drawable/ic_tabs"
+            android:layout_marginRight="50dp"
+            android:onClick="onClick"
+            android:clickable="true"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
